@@ -1,0 +1,179 @@
+fileFormatVersion: 2
+guid: 11c86b5915988a04c9099e1f4e2ed152
+timeCreated: 1536591900
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: dental_chair
+    100004: dental_chair_body
+    100006: dental_chair_head
+    100008: body
+    100010: bottle
+    100012: clinic_cupboard
+    100014: clinic_cupboard_l
+    100016: clinic_cupboard_l.001
+    100018: clinic_cupboard_r
+    100020: clinic_cupboard_r.001
+    100022: clinic_table_1
+    100024: clinic_table_2
+    100026: clinic_table_3
+    100028: clock
+    100030: clock.001
+    100032: cloth_1
+    100034: cloth_2
+    100036: couch
+    100038: drop_counter
+    100040: table_1
+    400000: //RootNode
+    400002: dental_chair
+    400004: dental_chair_body
+    400006: dental_chair_head
+    400008: body
+    400010: bottle
+    400012: clinic_cupboard
+    400014: clinic_cupboard_l
+    400016: clinic_cupboard_l.001
+    400018: clinic_cupboard_r
+    400020: clinic_cupboard_r.001
+    400022: clinic_table_1
+    400024: clinic_table_2
+    400026: clinic_table_3
+    400028: clock
+    400030: clock.001
+    400032: cloth_1
+    400034: cloth_2
+    400036: couch
+    400038: drop_counter
+    400040: table_1
+    2300000: dental_chair
+    2300002: dental_chair_body
+    2300004: dental_chair_head
+    2300006: body
+    2300008: bottle
+    2300010: clinic_cupboard
+    2300012: clinic_cupboard_l
+    2300014: clinic_cupboard_l.001
+    2300016: clinic_cupboard_r
+    2300018: clinic_cupboard_r.001
+    2300020: clinic_table_1
+    2300022: clinic_table_2
+    2300024: clinic_table_3
+    2300026: clock
+    2300028: clock.001
+    2300030: cloth_1
+    2300032: cloth_2
+    2300034: couch
+    2300036: drop_counter
+    2300038: table_1
+    3300000: dental_chair
+    3300002: dental_chair_body
+    3300004: dental_chair_head
+    3300006: body
+    3300008: bottle
+    3300010: clinic_cupboard
+    3300012: clinic_cupboard_l
+    3300014: clinic_cupboard_l.001
+    3300016: clinic_cupboard_r
+    3300018: clinic_cupboard_r.001
+    3300020: clinic_table_1
+    3300022: clinic_table_2
+    3300024: clinic_table_3
+    3300026: clock
+    3300028: clock.001
+    3300030: cloth_1
+    3300032: cloth_2
+    3300034: couch
+    3300036: drop_counter
+    3300038: table_1
+    4300000: dental_chair
+    4300002: dental_chair_body
+    4300004: dental_chair_head
+    4300006: couch
+    4300008: body
+    4300010: table_1
+    4300012: cloth_1
+    4300014: cloth_2
+    4300016: clock.001
+    4300018: clock
+    4300020: clinic_cupboard_l.001
+    4300022: clinic_cupboard_r.001
+    4300024: clinic_table_3
+    4300026: clinic_cupboard
+    4300028: clinic_cupboard_l
+    4300030: clinic_cupboard_r
+    4300032: clinic_table_1
+    4300034: clinic_table_2
+    4300036: drop_counter
+    4300038: bottle
+  materials:
+    importMaterials: 0
+    materialName: 1
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 0
+    normalImportMode: 1
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

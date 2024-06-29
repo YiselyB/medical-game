@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: a3cbe9b9cd2182c4e9ec170b061ee755
+timeCreated: 1536591972
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: body
+    100004: bottle
+    100006: clinic_cupboard
+    100008: clinic_cupboard_l
+    100010: clinic_cupboard_l.001
+    100012: clinic_cupboard_r
+    100014: clinic_cupboard_r.001
+    100016: clinic_table_1
+    100018: clinic_table_2
+    100020: clinic_table_3
+    100022: clock
+    100024: clock.001
+    100026: cloth_1
+    100028: cloth_2
+    100030: couch
+    100032: drop_counter
+    100034: table_1
+    400000: //RootNode
+    400002: body
+    400004: bottle
+    400006: clinic_cupboard
+    400008: clinic_cupboard_l
+    400010: clinic_cupboard_l.001
+    400012: clinic_cupboard_r
+    400014: clinic_cupboard_r.001
+    400016: clinic_table_1
+    400018: clinic_table_2
+    400020: clinic_table_3
+    400022: clock
+    400024: clock.001
+    400026: cloth_1
+    400028: cloth_2
+    400030: couch
+    400032: drop_counter
+    400034: table_1
+    2300000: //RootNode
+    2300002: body
+    2300004: bottle
+    2300006: clinic_cupboard
+    2300008: clinic_cupboard_l
+    2300010: clinic_cupboard_l.001
+    2300012: clinic_cupboard_r
+    2300014: clinic_cupboard_r.001
+    2300016: clinic_table_1
+    2300018: clinic_table_2
+    2300020: clinic_table_3
+    2300022: clock
+    2300024: clock.001
+    2300026: cloth_1
+    2300028: cloth_2
+    2300030: couch
+    2300032: drop_counter
+    2300034: table_1
+    3300000: //RootNode
+    3300002: body
+    3300004: bottle
+    3300006: clinic_cupboard
+    3300008: clinic_cupboard_l
+    3300010: clinic_cupboard_l.001
+    3300012: clinic_cupboard_r
+    3300014: clinic_cupboard_r.001
+    3300016: clinic_table_1
+    3300018: clinic_table_2
+    3300020: clinic_table_3
+    3300022: clock
+    3300024: clock.001
+    3300026: cloth_1
+    3300028: cloth_2
+    3300030: couch
+    3300032: drop_counter
+    3300034: table_1
+    4300000: couch
+    4300002: body
+    4300004: table_1
+    4300006: cloth_1
+    4300008: cloth_2
+    4300010: clock.001
+    4300012: clock
+    4300014: clinic_cupboard_l.001
+    4300016: clinic_cupboard_r.001
+    4300018: clinic_table_3
+    4300020: clinic_cupboard
+    4300022: clinic_cupboard_l
+    4300024: clinic_cupboard_r
+    4300026: clinic_table_1
+    4300028: clinic_table_2
+    4300030: drop_counter
+    4300032: bottle
+  materials:
+    importMaterials: 0
+    materialName: 1
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 0
+    normalImportMode: 1
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

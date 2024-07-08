@@ -4,32 +4,26 @@ using UnityEngine;
 
 public class TwoColorShading : MonoBehaviour
 {
-    public Color hexagonColor = Color.white;
-    public Color squareColor = Color.black;
-
-    private Renderer[] renderers;
+    public Material tileMaterial; 
+    private MaterialPropertyBlock propBlock;
 
     void Start()
     {
-        renderers = GetComponentsInChildren<Renderer>();
-        ChangeColor(hexagonColor, squareColor);
-    }
+        propBlock = new MaterialPropertyBlock();
 
-    void ChangeColor(Color hexagonColor, Color squareColor)
-    {
-        foreach (Renderer renderer in renderers)
+        // Convert hex string to Color
+        Color color;
+        if (ColorUtility.TryParseHtmlString("#DF6396", out color))
         {
-            foreach (Material material in renderer.materials)
-            {
-                if (material.name.Contains("HexagonMaterial"))
-                {
-                    material.color = hexagonColor;
-                }
-                else if (material.name.Contains("SquareMaterial"))
-                {
-                    material.color = squareColor;
-                }
-            }
+            propBlock.SetColor("_Color", color);
+
+            // Apply the property block to the renderer of the tile
+            Renderer renderer = GetComponent<Renderer>();
+            renderer.SetPropertyBlock(propBlock);
+        }
+        else
+        {
+            Debug.LogError("Failed to parse color");
         }
     }
 }

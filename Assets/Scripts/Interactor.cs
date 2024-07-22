@@ -33,4 +33,16 @@ public class Interactor : MonoBehaviour
             }
         }
     }
+
+    public void ButtonPress()
+    {
+        Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
+        if (Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
+        {
+            if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+            {
+                interactObj.Interact();
+            }
+        }
+    }
 }

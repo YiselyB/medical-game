@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 interface IInteractable
 {
@@ -12,10 +13,14 @@ public class Interactor : MonoBehaviour
     public Transform InteractorSource;
     public float InteractRange;
 
+    //Health
+    public Image healthBar;
+    public float healthAmount = 10f;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthBar.fillAmount = healthAmount / 100f;
     }
 
     // Update is called once per frame
@@ -23,6 +28,7 @@ public class Interactor : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            Debug.Log("E");
             Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
             if(Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
             {
@@ -36,6 +42,7 @@ public class Interactor : MonoBehaviour
 
     public void ButtonPress()
     {
+        Debug.Log("Button pressed");
         Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
         if (Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
         {
@@ -44,5 +51,12 @@ public class Interactor : MonoBehaviour
                 interactObj.Interact();
             }
         }
+    }
+
+    public void AddHealth(float healAmount)
+    {
+        healthAmount += healAmount;
+        if (healthAmount > 100) { healthAmount = 100; }
+        healthBar.fillAmount = healthAmount / 100f;
     }
 }

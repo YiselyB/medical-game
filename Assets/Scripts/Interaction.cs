@@ -5,24 +5,21 @@ using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour, IInteractable
 {
-    public Image healthBar;
-    public float healthAmount = 10f;
+    GameObject interactor;
+    Interactor interactorScript;
 
     public void Start()
     {
-        healthBar.fillAmount = healthAmount / 100f;
+        
     }
 
     public void Interact()
     {
-        //Debug.Log(Random.Range(0, 100));
-        AddHealth(10);
+        Debug.Log(Random.Range(0, 100));
+        interactor = GameObject.Find("Interactor");
+        interactorScript = interactor.GetComponent<Interactor>();
+        interactorScript.AddHealth(10);
     }
 
-    public void AddHealth(float healAmount)
-    {
-        healthAmount += healAmount;
-        if (healthAmount > 100) {  healthAmount = 100; }
-        healthBar.fillAmount = healthAmount / 100f;
-    }
+    
 }

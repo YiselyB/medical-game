@@ -21,4 +21,9 @@ public class services : MonoBehaviour
     {
         SceneManager.LoadScene(id);
     }
+
+    public void exitGame()//Exits the application
+    {
+        Application.Quit();
+    }
 }

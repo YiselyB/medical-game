@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 interface IInteractable
 {
@@ -20,6 +21,7 @@ public class Interactor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(SceneManager.GetActiveScene().buildIndex);
         healthBar.fillAmount = healthAmount / 100f;
     }
 

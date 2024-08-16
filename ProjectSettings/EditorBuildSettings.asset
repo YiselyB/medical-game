@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SurroundService.unity
     guid: 63e21d07c2a4844d793dfddb721a182b
+  - enabled: 1
+    path: Assets/Scenes/Main Scene.unity
+    guid: 6d8f9d5670d9ea74da97b705404b18d8
   m_configObjects: {}

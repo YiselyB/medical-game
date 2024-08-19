@@ -905,7 +905,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "6\n1,000 \n20\n8\n2\n6\n3\n25\n$7,500\n$7,000 \n$9,500 \n "
+  m_text: "6\n1,000 \n20\n8\n2\n6\n3\n25\n$7,500\n$7,500 \n$9,500 \n "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

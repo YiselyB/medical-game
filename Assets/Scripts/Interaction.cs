@@ -8,10 +8,24 @@ public class Interaction : MonoBehaviour, IInteractable
     GameObject interactor;
     Interactor interactorScript;
     public int interactNum = -1;
+    public GameObject servicesPanel;
+
+    private bool isPanelActive = false;
+
 
     public void Start()
     {
-        
+
+        if (interactor == null)
+        {
+            interactor = GameObject.Find("Interactor");
+            interactorScript = interactor.GetComponent<Interactor>();
+        }
+
+        if (servicesPanel != null)
+        {
+            servicesPanel.SetActive(false);
+        }
     }
 
     public void Interact()
@@ -37,7 +51,22 @@ public class Interaction : MonoBehaviour, IInteractable
         interactor = GameObject.Find("Scripts");
         interactorScript = interactor.GetComponent<Interactor>();
         interactorScript.AddHealth(10);
+
+        if (servicesPanel != null)
+        {
+            isPanelActive = !isPanelActive;
+            servicesPanel.SetActive(isPanelActive);
+        }
     }
 
-    
+    void Update()
+    {
+        if (isPanelActive && Input.GetKeyDown(KeyCode.E))
+        {
+            servicesPanel.SetActive(false);
+            isPanelActive = false;
+        }
+    }
+
+
 }

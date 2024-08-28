@@ -7,50 +7,44 @@ public class Interaction : MonoBehaviour, IInteractable
 {
     GameObject interactor;
     Interactor interactorScript;
-    bool interact1 = false, interact2 = false;
     public int interactNum = -1;
 
     public void Start()
     {
-        //make sure interactions are set to false
-        interact1 = false;
-        interact2 = false;
+        
     }
 
     public void Interact()
     {
         Debug.Log(interactNum);
         interactor = GameObject.Find("Scripts");
-        //interactorScript = interactor.GetComponent<Interactor>();
-        //interactorScript.AddHealth(10);
-
+        interactorScript = interactor.GetComponent<Interactor>();
         switch (interactNum)
         {
             case 1://First interaction
                 //first check if interaction has happened before
-                if (!interact1)
-                {
-                    //If no interaction has happened before then do the interaction
-
+                if (!interactorScript.Interact1())
+                {//If no interaction has happened before then do the interaction
                     //'scan' player
-                    //move player
-                    //turn off sparkles
-                    //turn on next interaction sparkles
+                    interactorScript.ScanPlayer();
+                    //move patient
+                    interactorScript.TransformPatient();
+                    //turn off sparkles obj sparkles and turn on next
+                    interactorScript.ParticleManager(1);
 
-                    interact2 = false; //ensure next interaction is available
-                    interact1 = true;
+                    interactorScript.InteractObj(1);
                 }
                 break;
             case 2://second interation
                 //first check if interaction has happened before
-                if (!interact2)
-                {
-                    //If no interaction has happened before then do the interaction
-
+                if (!interactorScript.Interact2())
+                {//If no interaction has happened before then do the interaction
                     //pop up menu of 3 services pops up
+                    interactorScript.OptionMenu(true);
                     //sparkles turn off
+                    interactorScript.ParticleManager(2);
 
-                    interact2 = true;
+                    interactorScript.InteractObj(2);
                 }
                 break;
             case 10://Youtbe URL
@@ -67,22 +61,6 @@ public class Interaction : MonoBehaviour, IInteractable
                 break;
             default:
                 break;
-        }
-    }
-
-    public void healPatient(int num)
-    {
-        if(num == 1) {//mono service
-            interactorScript = interactor.GetComponent<Interactor>();
-            interactorScript.AddHealth(40);
-        }
-        else if(num == 2) {//stereo service
-            interactorScript = interactor.GetComponent<Interactor>();
-            interactorScript.AddHealth(65);
-        }
-        else if(num == 3) {//surround service
-            interactorScript = interactor.GetComponent<Interactor>();
-            interactorScript.AddHealth(90);
         }
     }
 }

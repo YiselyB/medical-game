@@ -17,13 +17,23 @@ public class Interactor : MonoBehaviour
     //Health
     public Image healthBar;
     public float healthAmount = 10f;
+
+    bool interact1, interact2; 
     public Canvas popuptxt, popupmenu;
+    public GameObject patient;
+    public ParticleSystem interactable1, interactable2;
 
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log(SceneManager.GetActiveScene().buildIndex);
         healthBar.fillAmount = healthAmount / 100f;
+
+        interact1 = false;
+        interact2 = true;
+        interactable1.Play();
+        interactable2.Stop();
+
 
         //make sure pop-up menu is not enabled
         popupmenu.enabled = false;
@@ -36,7 +46,7 @@ public class Interactor : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("E");
+            Debug.Log("E" + interact1 + " " + interact2);
             Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
             if(Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
             {
@@ -68,28 +78,63 @@ public class Interactor : MonoBehaviour
         healthBar.fillAmount = healthAmount / 100f;
     }
 
-    public void OptionMenu(bool onoff)
+    public void InteractObj(int n)
     {
-        if (onoff)
+        if (n == 1)
         {
-            popupmenu.enabled = true;
+            interact1 = true;
+            interact2 = false;
         }
-        else
+        else if (n == 2)
         {
-            popupmenu.enabled = false;
+            interact2 = true;
         }
     }
-    
-    public void ShowPopupText()
+
+    public void ScanPlayer()
     {
         popuptxt.enabled = true;
         Invoke("HidePopupText", 5f);
-        
     }
 
-    public void HidePopupText()
-    {
-        popuptxt.enabled = false;
+    public void HidePopupText() { popuptxt.enabled = false; }
 
+    public void OptionMenu(bool onoff) { popupmenu.enabled = onoff; }
+
+    public bool Interact1() { return interact1; }
+    public bool Interact2() { return interact2; }
+
+    public void ParticleManager(int n)
+    {
+        if (n == 1) { //turn off first machine particle, and turn on second
+            interactable1.Stop();
+            interactable2.Play();
+        }
+        else if (n == 2) { //turn off all particles
+            interactable2.Stop();
+        }
+    }
+
+    public void TransformPatient()
+    {
+        //move right
+        patient.transform.position += Vector3.right * 6.8f;
+    }
+
+    public void healPatient(int num)
+    {
+        if (num == 1)
+        {//mono service
+            AddHealth(40);
+        }
+        else if (num == 2)
+        {//stereo service
+            AddHealth(65);
+        }
+        else if (num == 3)
+        {//surround service
+            AddHealth(90);
+        }
+        OptionMenu(false);
     }
 }

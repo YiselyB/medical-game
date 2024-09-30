@@ -12,13 +12,13 @@ interface IInteractable
 public class Interactor : MonoBehaviour
 {
     public Transform InteractorSource;
-    public float InteractRange;
+    public float InteractRange, fadeSpeed;
 
     //Health
     public Image healthBar;
     public float healthAmount = 10f;
 
-    bool interact1, interact2; 
+    private bool interact1, interact2, fadeOut, fadeIn; 
     public Canvas popuptxt, popupmenu;
     public GameObject patient;
     public ParticleSystem interactable1, interactable2;
@@ -114,11 +114,60 @@ public class Interactor : MonoBehaviour
             interactable2.Stop();
         }
     }
+    
+    public void MovePatient()
+    {
+        Invoke("StartFadeOut", 1f);
+
+        Invoke("TransformPatient", 6f);
+
+        Invoke("StartFadeIn", 7f);
+    }
 
     public void TransformPatient()
     {
-        //move right
+        //moves patient to the right
         patient.transform.position += Vector3.right * 6.8f;
+
+    }
+
+    public void StartFadeOut() {
+        //fades out patient
+        StartCoroutine(FadeOutObj());
+    }
+
+    public void StartFadeIn() {
+        //fades out patient
+        StartCoroutine(FadeInObj());
+    }
+
+    public IEnumerator FadeOutObj()
+    {
+        //Fades out patient
+        while (patient.GetComponent<Renderer>().material.color.a > 0)
+        {
+            Debug.Log("FadeOut");
+            Color objectColor = patient.GetComponent<Renderer>().material.color;
+            float fadeAmt = objectColor.a - (fadeSpeed * Time.deltaTime);
+
+            objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmt);
+            patient.GetComponent<Renderer>().material.color = objectColor;
+            yield return null;
+        }
+    }
+    public IEnumerator FadeInObj()
+    {
+        //Fades in patient
+        while (patient.GetComponent<Renderer>().material.color.a < 1)
+        {
+            Debug.Log("FadeIn");
+            Color objectColor = patient.GetComponent<Renderer>().material.color;
+            float fadeAmt = objectColor.a + (fadeSpeed * Time.deltaTime);
+
+            objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmt);
+            patient.GetComponent<Renderer>().material.color = objectColor;
+            yield return null;
+        }
     }
 
     public void healPatient(int num)

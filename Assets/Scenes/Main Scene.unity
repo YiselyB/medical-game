@@ -7708,6 +7708,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400118, guid: 998eafef4e2b1364b98d59d432e602d8, type: 3}
   m_PrefabInstance: {fileID: 704571345}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &370094337
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185272897}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1fd8d98e9d0f95a47ac8b6d8ebd0311c, type: 2}
+  - {fileID: 2100000, guid: a0a1670154aad71448ffc7077da768ca, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &375860947
 GameObject:
   m_ObjectHideFlags: 0
@@ -10297,6 +10340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractorSource: {fileID: 441977473}
   InteractRange: 3
+  fadeSpeed: 1
   healthBar: {fileID: 1437667646}
   healthAmount: 10
   popuptxt: {fileID: 727409516}
@@ -11171,13 +11215,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 13.628006
       objectReference: {fileID: 0}
+    - target: {fileID: 13700002, guid: 998eafef4e2b1364b98d59d432e602d8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1fd8d98e9d0f95a47ac8b6d8ebd0311c, type: 2}
+    - target: {fileID: 13700004, guid: 998eafef4e2b1364b98d59d432e602d8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1fd8d98e9d0f95a47ac8b6d8ebd0311c, type: 2}
+    - target: {fileID: 13700008, guid: 998eafef4e2b1364b98d59d432e602d8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1fd8d98e9d0f95a47ac8b6d8ebd0311c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 400118, guid: 998eafef4e2b1364b98d59d432e602d8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 858579768}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100116, guid: 998eafef4e2b1364b98d59d432e602d8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 370094337}
   m_SourcePrefab: {fileID: 100100000, guid: 998eafef4e2b1364b98d59d432e602d8, type: 3}
 --- !u!1 &707588836
 GameObject:

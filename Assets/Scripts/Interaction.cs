@@ -28,7 +28,7 @@ public class Interaction : MonoBehaviour, IInteractable
                     //'scan' player
                     interactorScript.ScanPlayer();
                     //move patient
-                    interactorScript.TransformPatient();
+                    interactorScript.MovePatient();
                     //turn off sparkles obj sparkles and turn on next
                     interactorScript.ParticleManager(1);
 

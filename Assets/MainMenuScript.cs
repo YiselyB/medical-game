@@ -8,6 +8,7 @@ public class MainMenuScript : MonoBehaviour
 {
     public AudioSource audio;
     public AudioSource audio2;
+    public AudioSource exitAudio;
 
 
     public void playButton()
@@ -16,6 +17,11 @@ public class MainMenuScript : MonoBehaviour
     }
     public void servicesButton() {
         audio2.Play();
+
+    }
+    public void ExitButton()
+    {
+        exitAudio.Play();
 
     }
 

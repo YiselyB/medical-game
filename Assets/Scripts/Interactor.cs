@@ -19,7 +19,7 @@ public class Interactor : MonoBehaviour
     public float healthAmount = 10f;
 
     bool interact1, interact2; 
-    public Canvas popuptxt, popupmenu;
+    public Canvas popuptxt, popupmenu, endtxt;
     public GameObject patient;
     public ParticleSystem interactable1, interactable2;
 
@@ -39,6 +39,8 @@ public class Interactor : MonoBehaviour
         popupmenu.enabled = false;
         //make sure pop-up text is not enabled
         popuptxt.enabled = false;
+        //make sure ending text is not enabled
+        endtxt.enabled = false;
     }
 
     // Update is called once per frame
@@ -136,5 +138,6 @@ public class Interactor : MonoBehaviour
             AddHealth(90);
         }
         OptionMenu(false);
+        endtxt.enabled = true;
     }
 }

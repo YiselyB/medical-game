@@ -1052,7 +1052,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "6\n1,000 \n20\n8\n2\n6\n3\n25\n$7,500\n$7,000 \n$9,500 \n "
+  m_text: "6\n1,000 \n20\n8\n2\n6\n3\n25\n$7,500\n$7,500 \n$9,500 \n "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1685,7 +1685,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Video Interview\nSocial Media Interaction (per platform)\nEmail/SMS Campaign\nWebsite
     Update\nSEO Update\nInfographic\nAnimation\nVlog Entry\niOS & Android Game Creation
-    \nSpotify Podcast Commercial (1 month)\nStreaming TV Commercial (1 month)"
+    \nSpotify Podcast Commercial (2 month)\nStreaming TV Commercial (2 month)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
